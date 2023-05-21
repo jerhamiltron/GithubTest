@@ -3,10 +3,10 @@ import './App.css';
 
 import { Configuration, OpenAIApi } from 'openai';
 
-const SECRET_KEY = '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';
+const SECRET_KEY = process.env.API_KEY;
 
 const config = new Configuration({
-  apiKey: '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',
+  apiKey: SECRET_KEY,
 });
 
 const openai = new OpenAIApi(config);
